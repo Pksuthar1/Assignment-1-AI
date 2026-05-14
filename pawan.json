@@ -1,0 +1,23 @@
+JSON{ 
+"system_name": "ElderCare AI - Companion App for Elderly", 
+"peas": { 
+"performance_measures": ["Medication adherence rate", "Mood improvement score", "User 
+engagement & satisfaction", "Emergency response success rate"], 
+"environment": "Elderly users' homes through smartphones with changing moods and health 
+conditions", 
+"actuators": ["Voice & text chatbot", "Push notifications", "SOS alerts", "Activity suggestions"], 
+"sensors": ["Microphone", "Emoji input", "Accelerometer", "Camera (optional)", "GPS & history"] 
+}, 
+"environment_classification": { 
+"observability": {"choice": "Partially Observable", "justification": "Cannot fully see user’s real 
+emotions and health"}, 
+"agents": {"choice": "Multi-agent", "justification": "Works with user, family and emergency 
+services"}, 
+"deterministic": {"choice": "Stochastic", "justification": "Emotions and health are unpredictable"}, 
+"episodic": {"choice": "Sequential", "justification": "Interactions affect future user wellbeing"}, 
+"static": {"choice": "Dynamic", "justification": "User mood and needs change all the time"}, 
+"discrete": {"choice": "Continuous", "justification": "Emotions and activity levels vary 
+continuously"} 
+}, 
+"utility_function": "U = 0.45*Emotional_Wellbeing + 0.25*Safety + 0.2*Routine - 0.1*Fatigue" 
+}
