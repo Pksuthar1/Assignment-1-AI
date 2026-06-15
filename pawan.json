@@ -1,23 +1,55 @@
-JSON{ 
-"system_name": "ElderCare AI - Companion App for Elderly", 
-"peas": { 
-"performance_measures": ["Medication adherence rate", "Mood improvement score", "User 
-engagement & satisfaction", "Emergency response success rate"], 
-"environment": "Elderly users' homes through smartphones with changing moods and health 
-conditions", 
-"actuators": ["Voice & text chatbot", "Push notifications", "SOS alerts", "Activity suggestions"], 
-"sensors": ["Microphone", "Emoji input", "Accelerometer", "Camera (optional)", "GPS & history"] 
-}, 
-"environment_classification": { 
-"observability": {"choice": "Partially Observable", "justification": "Cannot fully see user’s real 
-emotions and health"}, 
-"agents": {"choice": "Multi-agent", "justification": "Works with user, family and emergency 
-services"}, 
-"deterministic": {"choice": "Stochastic", "justification": "Emotions and health are unpredictable"}, 
-"episodic": {"choice": "Sequential", "justification": "Interactions affect future user wellbeing"}, 
-"static": {"choice": "Dynamic", "justification": "User mood and needs change all the time"}, 
-"discrete": {"choice": "Continuous", "justification": "Emotions and activity levels vary 
-continuously"} 
-}, 
-"utility_function": "U = 0.45*Emotional_Wellbeing + 0.25*Safety + 0.2*Routine - 0.1*Fatigue" 
+{
+  "system_name": "Agricultural Monitoring Drone for Crop Disease Detection",
+  "peas": {
+    "performance_measures": [
+      "Disease Detection Accuracy",
+      "False Positive Rate",
+      "Coverage Per Hour",
+      "Battery Efficiency",
+      "Response Time for Disease Reporting"
+    ],
+    "environment": "Large agricultural farms with varying weather conditions, different crop types, changing lighting conditions, and physical obstacles.",
+    "actuators": [
+      "Flight Controller",
+      "Propellers",
+      "Navigation System",
+      "Wireless Communication Module",
+      "Precision Sprayer"
+    ],
+    "sensors": [
+      "High-Resolution RGB Camera",
+      "Multispectral Camera",
+      "Infrared Sensor",
+      "GPS Module",
+      "Altitude Sensor",
+      "Weather Sensor"
+    ]
+  },
+  "environment_classification": {
+    "observability": {
+      "choice": "Partially Observable",
+      "justification": "Occlusion, weather conditions, and sensor limitations prevent complete observation."
+    },
+    "agents": {
+      "choice": "Single-Agent",
+      "justification": "One autonomous drone performs monitoring and decision-making."
+    },
+    "determinism": {
+      "choice": "Stochastic",
+      "justification": "Environmental changes and sensor noise introduce uncertainty."
+    },
+    "episodicity": {
+      "choice": "Sequential",
+      "justification": "Current actions affect future navigation and monitoring outcomes."
+    },
+    "dynamics": {
+      "choice": "Dynamic",
+      "justification": "Crop conditions and environmental factors change over time."
+    },
+    "continuity": {
+      "choice": "Continuous",
+      "justification": "Flight movement and sensor data vary continuously."
+    }
+  },
+  "utility_function": "U = 0.8(Detection Accuracy) - 0.2(Energy Cost)"
 }
